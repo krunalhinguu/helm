@@ -46,7 +46,6 @@ type Upgrade struct {
 
 	ChartPathOptions
 
-	Adopt bool
 	// Install is a purely informative flag that indicates whether this upgrade was done in "install" mode.
 	//
 	// Applications may use this to determine whether this Upgrade operation was done as part of a

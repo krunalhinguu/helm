@@ -71,7 +71,6 @@ type Install struct {
 
 	ClientOnly      bool
 	Force           bool
-	ForceAdopt      bool
 	CreateNamespace bool
 	DryRun          bool
 	DryRunOption    string
@@ -111,6 +110,9 @@ type Install struct {
 	// Used by helm template to add the release as part of OutputDir path
 	// OutputDir/<ReleaseName>
 	UseReleaseName bool
+	// TakeOwnership will ignore the check for helm annotations and take ownership of the resources.
+	TakeOwnership bool
+	PostRenderer  postrender.PostRenderer
 	// TakeOwnership will ignore the check for helm annotations and take ownership of the resources.
 	TakeOwnership bool
 	PostRenderer  postrender.PostRenderer
